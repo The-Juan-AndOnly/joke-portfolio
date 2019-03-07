@@ -74,3 +74,12 @@
     width: 200px;
   }
 }
+
+@media (min-width: 601px) and (max-width: 735px) {
+  #nav .mobile-nav {
+    display: block;
+  }
+  #nav .nav-links {
+    display: none;
+  }
+}

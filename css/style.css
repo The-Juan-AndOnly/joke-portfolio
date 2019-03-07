@@ -76,9 +76,43 @@ header {
   border-radius: 5px;
   cursor: pointer;
 }
+
+#nav .mobile-nav {
+  display: none;
+  list-style-type: none;
+}
+
+header .mobile-links {
+  display: none;
+}
+
+header .show {
+  display: block;
+  transform: translate3d(0, 0, 0);
+}
+
+header .mobile-links li {
+  margin: 0.5rem 0;
+}
+header .mobile-links li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.75rem;
+  transition: all 0.5s ease-in;
+  display: block;
+}
+header .mobile-links li a:hover {
+  background: #fff;
+  color: rgb(216, 8, 8);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ******************************** */
 #details {
   display: flex;
   height: calc(100vh - 61px);
+  background: rgb(216, 8, 8);
 }
 
 #details .detail-info,
@@ -321,9 +355,6 @@ header {
   justify-content: space-between;
   align-items: center;
   color: #fff;
-}
-
-#footer .social-links a {
 }
 
 #footer .fa-github {
