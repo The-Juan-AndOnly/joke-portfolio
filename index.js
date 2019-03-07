@@ -7,7 +7,7 @@ const mobileMenuBtn = document.querySelector('.mobile-nav');
 const mobileLinks = document.querySelector('.mobile-links');
 
 const onFormSubmit = e => {
-  e.preventDefault;
+  e.preventDefault();
   modal.style.display = 'block';
 };
 
