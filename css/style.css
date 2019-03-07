@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.btn {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  transition: all 0.75s ease-in;
+}
+
+.btn-dark {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  background: #333;
+}
+
+.big-red-font {
+  font-size: 1.5rem;
+  color: rgb(216, 8, 8);
+}
+
+header {
+  background: rgb(216, 8, 8);
+  height: 100vh;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+#nav .brand {
+  color: #fff;
+}
+
+#nav .nav-links {
+  display: flex;
+  list-style-type: none;
+}
+
+#nav .nav-links li {
+  margin: 0 0.5rem;
+}
+
+#nav .nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.75rem;
+  transition: all 0.5s ease-in;
+}
+
+#nav .nav-links li a:hover {
+  background: #fff;
+  color: rgb(216, 8, 8);
+  border-radius: 5px;
+  cursor: pointer;
+}
+#details {
+  display: flex;
+  height: calc(100vh - 61px);
+}
+
+#details .detail-info,
+#details .detail-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#details .detail-info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+#details .detail-info h1 {
+  font-size: 4rem;
+  position: relative;
+  top: -1000px;
+  animation: slideDown 2s ease-in forwards;
+}
+
+#details .detail-info h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  margin: 4rem 0;
+  position: relative;
+  left: -1000px;
+  animation: slideRight 1.2s ease-in 0.5s forwards;
+}
+
+#details .detail-info .btn {
+  position: relative;
+  bottom: -1000px;
+  animation: slideUp 1.75s ease-in 0.75s forwards;
+}
+
+#details .detail-info .btn:hover {
+  border-color: rgb(216, 8, 8);
+  background: #fff;
+  color: rgb(216, 8, 8);
+  cursor: pointer;
+}
+
+#details .detail-image {
+  background: #f5f5f5;
+}
+
+.detail-image .red-circle {
+  border: 1.5rem solid rgb(216, 8, 8);
+  border-radius: 50%;
+  opacity: 0;
+  animation: revealRed 2.5s ease-in forwards;
+}
+.detail-image .white-circle {
+  border: 1.5rem solid #ccc;
+  border-radius: 50%;
+  opacity: 0;
+  animation: revealWhite 2.5s ease-in 0.75s forwards;
+}
+
+.detail-image img {
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  opacity: 0;
+  animation: revealImg 2.5s ease-in 1.75s forwards;
+}
+/* *************************** */
+
+#about .container {
+  display: flex;
+}
+
+#about aside {
+  flex: 1;
+  display: flex;
+  background: lightblue;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+#about article {
+  flex: 3;
+  padding: 10px 0 0 10px;
+}
+
+#about article p {
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+/**************************** */
+#work {
+  background: #e5e5e5;
+}
+
+#work .work-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: rgb(216, 8, 8);
+}
+
+#work .project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+#work .project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  transition: transform 1s;
+}
+
+#work .project:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.project img {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.project .project-info {
+  margin: 1rem 0;
+  text-align: center;
+  padding: 10px;
+}
+
+.project .project-info h3 {
+  color: rgb(216, 8, 8);
+  margin-bottom: 0.5rem;
+}
+
+/* ***************************** */
+
+#contact .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact form {
+  width: 80%;
+}
+
+#contact .form-group {
+  margin: 2rem 0;
+}
+
+#contact .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#contact .form-group input,
+#contact .form-group textarea {
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 0.25rem;
+  width: 100%;
+}
+
+#contact button {
+  margin: 0 auto;
+  display: block;
+  background: rgb(216, 8, 8);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+#contact button:hover {
+  color: rgb(216, 8, 8);
+  background: #fff;
+  border-color: rgb(216, 8, 8);
+  cursor: pointer;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#modal .modal-content {
+  background: #fefefe;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+}
+
+#modal .modal-content h2 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+#modal .modal-content img {
+  display: block;
+  margin: 0 auto;
+}
+
+#modal .close {
+  color: #aaa;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#modal .close:hover,
+#modal .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#footer {
+  background: rgb(216, 8, 8);
+}
+
+#footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+#footer .social-links a {
+}
+
+#footer .fa-github {
+  color: black;
+  margin: 0 1rem;
+  transition: all 1s ease-in-out;
+}
+#footer .fa-codepen {
+  color: #333;
+  margin: 0 1rem;
+  transition: all 1s ease-in-out;
+}
+
+#footer .fa-github:hover,
+#footer .fa-codepen:hover {
+  transform: scale(1.5);
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes slideDown {
+  from {
+    top: -1000px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    left: -1000px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    bottom: -1000px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes revealRed {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes revealWhite {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes revealImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
