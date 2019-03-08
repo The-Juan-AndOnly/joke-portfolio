@@ -303,6 +303,13 @@ header .mobile-links li a:hover {
   cursor: pointer;
 }
 
+#contact .error {
+  display: inline-block;
+  padding: 0.5rem;
+  background: pink;
+  color: #fff;
+}
+
 #modal {
   display: none;
   position: fixed;
@@ -319,7 +326,7 @@ header .mobile-links li a:hover {
   background: #fefefe;
   margin: auto;
   padding: 20px;
-  width: 80%;
+  width: 60%;
 }
 
 #modal .modal-content h2 {
